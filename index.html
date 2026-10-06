@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+<meta name="theme-color" content="#12070e">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap');
+:root{--bg:#0b060a;--card:#171016;--pink:#ff6b9d;--rose:#ff9dbc;--gold:#ffd89a;--text:#fff7fb;--muted:#cbbac3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 50% 0,#351326 0,#10080d 38%,#080508 100%);color:var(--text);overflow-x:hidden}
+button{font:inherit}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}
+.heart{position:absolute;bottom:-40px;animation:float linear forwards;opacity:.7}
+@keyframes float{to{transform:translateY(-115vh) rotate(30deg);opacity:0}}
+#intro{min-height:100svh;display:grid;place-items:center;text-align:center;padding:28px;position:relative;overflow:hidden}
+.glow{position:absolute;width:420px;height:420px;background:#ff3f8f;filter:blur(130px);opacity:.16;border-radius:50%}
+.intro-box{position:relative;z-index:2;max-width:760px}
+.kicker{letter-spacing:5px;text-transform:uppercase;color:var(--rose);font-size:12px;margin-bottom:18px}
+h1{font-family:"Great Vibes",cursive;font-size:clamp(64px,14vw,150px);font-weight:400;line-height:.9}
+.intro-box p{margin:25px auto 30px;max-width:570px;color:var(--muted);font-size:17px;line-height:1.8}
+.btn{border:0;border-radius:999px;padding:14px 25px;background:linear-gradient(135deg,#ff4d8d,#c72e6b);color:white;cursor:pointer;box-shadow:0 12px 35px #ff4d8d30;transition:.25s}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+nav{position:sticky;top:0;z-index:15;background:#0b060add;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12;padding:12px;display:flex;gap:8px;justify-content:center;overflow:auto}
+nav a{color:#d8c6cf;text-decoration:none;font-size:12px;padding:9px 13px;border-radius:999px;white-space:nowrap}
+nav a:hover{background:#ffffff10;color:white}
+section{max-width:1050px;margin:auto;padding:85px 22px}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title .small{color:var(--rose);text-transform:uppercase;letter-spacing:4px;font-size:11px}
+.section-title h2{font-family:"DM Serif Display",serif;font-size:clamp(34px,6vw,58px);font-weight:400;margin:9px 0}
+.section-title p{color:var(--muted);line-height:1.7;max-width:650px;margin:auto}
+.letter{max-width:760px;margin:auto;background:linear-gradient(145deg,#24131d,#120b10);border:1px solid #ffffff14;border-radius:26px;padding:34px;box-shadow:0 25px 70px #0008}
+.letter p{color:#eadde3;line-height:2;font-size:16px;margin:0 0 18px}
+.signature{font-family:"Great Vibes";font-size:38px;color:var(--rose);text-align:right;margin-top:20px}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.photo{border:1px solid #ffffff15;border-radius:20px;overflow:hidden;background:#160d12;cursor:pointer;min-height:230px;position:relative}
+.photo:nth-child(1){grid-column:span 7;grid-row:span 2}
+.photo:nth-child(2){grid-column:span 5}
+.photo:nth-child(3){grid-column:span 5}
+.photo:nth-child(4){grid-column:span 4}
+.photo:nth-child(5){grid-column:span 4}
+.photo:nth-child(6){grid-column:span 4}
+.photo:nth-child(7){grid-column:span 12;max-height:430px}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}
+.photo:hover img{transform:scale(1.045)}
+.photo span{position:absolute;left:12px;bottom:12px;background:#0009;backdrop-filter:blur(8px);padding:7px 11px;border-radius:999px;font-size:11px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#150c12;border:1px solid #ffffff12;border-radius:20px;padding:24px;min-height:150px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#ff719c55}
+.card b{font-size:28px}.card h3{margin:12px 0 7px}.card p{color:var(--muted);line-height:1.6;font-size:14px}
+.timeline{max-width:720px;margin:auto;position:relative}
+.timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:1px;background:#ff6b9d55}
+.event{position:relative;padding:0 0 30px 55px}.dot{position:absolute;left:11px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--pink);box-shadow:0 0 20px #ff6b9d}
+.event h3{font-family:"DM Serif Display";font-size:25px}.event p{color:var(--muted);line-height:1.7;margin-top:5px}
+.gift-wrap{text-align:center}
+.gift{width:190px;height:155px;margin:20px auto 28px;position:relative;cursor:pointer;transition:.3s}
+.gift:hover{transform:scale(1.05)}
+.box{position:absolute;left:10px;right:10px;bottom:0;height:105px;background:linear-gradient(135deg,#ff4f8d,#9d1f55);border-radius:8px}
+.lid{position:absolute;left:0;right:0;top:20px;height:35px;background:#ff77a5;border-radius:8px;z-index:2}
+.ribbon-v{position:absolute;left:78px;top:0;width:34px;height:155px;background:#ffd89a;z-index:3}
+.ribbon-h{position:absolute;left:0;right:0;top:20px;height:35px;background:#ffd89a;z-index:4;opacity:.9}
+.bow{position:absolute;top:0;left:64px;width:64px;height:32px;z-index:5}
+.bow:before,.bow:after{content:"";position:absolute;width:42px;height:27px;background:#ffd89a;border-radius:50% 50% 15% 50%;top:0}.bow:before{left:-4px;transform:rotate(25deg)}.bow:after{right:-4px;transform:scaleX(-1) rotate(25deg)}
+.surprise{display:none;max-width:650px;margin:20px auto;background:#24131d;border:1px solid #ff719c55;padding:28px;border-radius:22px;animation:pop .5s}
+.surprise.show{display:block}
+@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+#question{min-height:80vh;display:grid;place-items:center;text-align:center}
+.question-box{max-width:720px}
+.question-box h2{font-family:"Great Vibes";font-size:clamp(55px,11vw,100px);font-weight:400}
+.question-box p{color:var(--muted);line-height:1.8;margin:18px 0 25px}
+#yesMsg{display:none;margin-top:25px;font-family:"Great Vibes";font-size:40px;color:var(--rose)}
+footer{text-align:center;padding:30px;color:#8e7b84;font-size:12px}
+.modal{position:fixed;inset:0;background:#000d;z-index:50;display:none;place-items:center;padding:20px}
+.modal.open{display:grid}
+.modal img{max-width:min(950px,96vw);max-height:88vh;object-fit:contain;border-radius:16px;box-shadow:0 20px 80px #000}
+.close{position:fixed;right:20px;top:20px;border:0;background:#ffffff18;color:white;border-radius:50%;width:42px;height:42px;font-size:22px;cursor:pointer}
+@media(max-width:700px){
+section{padding:65px 16px}.cards{grid-template-columns:1fr}.gallery{display:grid;grid-template-columns:1fr 1fr}.photo,.photo:nth-child(n){grid-column:span 1;grid-row:auto;min-height:220px}.photo:first-child{grid-column:span 2;min-height:360px}.photo:last-child{grid-column:span 2}.letter{padding:24px}.photo span{font-size:10px}
+}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<header id="intro">
+  <div class="glow"></div>
+  <div class="intro-box">
+    <div class="kicker">A little surprise, made with love</div>
+    <h1>Happy Birthday,<br>Avantika ❤️</h1>
+    <p>Today is about celebrating you, Avantika—the beautiful person who makes ordinary moments feel special. I made this little corner of the internet just for you.</p>
+    <button class="btn" onclick="document.querySelector('#letter').scrollIntoView()">Open Your Surprise ✨</button>
+  </div>
+</header>
+
+<nav>
+<a href="#letter">💌 Letter</a><a href="#memories">📸 Memories</a><a href="#reasons">❤️ Why You</a><a href="#journey">🕰️ Us</a><a href="#gift">🎁 Surprise</a><a href="#question">💖 One Question</a>
+</nav>
+
+<section id="letter">
+  <div class="section-title"><div class="small">From my heart</div><h2>A Letter For You</h2><p>Some things are easier to write than to say.</p></div>
+  <div class="letter">
+    <p>My love,</p>
+    <p>Happy Birthday, Avantika, to the person who has become such a beautiful part of my life. ❤️</p>
+    <p>I hope you know how special you are to me—not only on your birthday, but on all the ordinary days in between. Your smile, your little expressions, the way you care, and simply having you beside me are things I never want to take for granted.</p>
+    <p>We've collected so many little memories together, and somehow each one has become a part of a story I want to keep writing with you. I don't know exactly what every tomorrow will look like, but I know I'd love to see many more tomorrows with you.</p>
+    <p>So today, I just want you to smile, enjoy your day, and remember one simple thing: <b>you are loved, deeply and genuinely.</b></p>
+    <p>Happy Birthday, Avantika, beautiful. May this year bring you everything your heart deserves. ❤️</p>
+    <div class="signature">Always yours ♡</div>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="section-title"><div class="small">Our little universe</div><h2>Our Memories 📸</h2><p>Tap any picture to see it bigger.</p></div>
+  <div class="gallery">
+    <div class="photo"><img src="photos/memory-1.png"><span>One of my favourites ❤️</span></div>
+    <div class="photo"><img src="photos/memory-2.jpg"><span>Just us</span></div>
+    <div class="photo"><img src="photos/memory-3.png"><span>A beautiful day</span></div>
+    <div class="photo"><img src="photos/memory-4.png"><span>Rainy memories ☔</span></div>
+    <div class="photo"><img src="photos/memory-5.png"><span>Your smile ❤️</span></div>
+    <div class="photo"><img src="photos/memory-6.jpg"><span>You being you ✨</span></div>
+    <div class="photo"><img src="photos/memory-7.jpg"><span>My favourite person</span></div>
+  </div>
+</section>
+
+<section id="reasons">
+  <div class="section-title"><div class="small">There are many</div><h2>Reasons I Love You ❤️</h2></div>
+  <div class="cards">
+    <div class="card"><b>01</b><h3>Your Smile</h3><p>It can turn even an ordinary moment into one I want to remember.</p></div>
+    <div class="card"><b>02</b><h3>Your Heart</h3><p>The kindness and care you show make you genuinely special.</p></div>
+    <div class="card"><b>03</b><h3>Your Little Things</h3><p>It is the tiny habits, expressions and moments that make you, you.</p></div>
+    <div class="card"><b>04</b><h3>Your Presence</h3><p>Sometimes I don't need anything else—having you around is enough.</p></div>
+    <div class="card"><b>05</b><h3>Our Memories</h3><p>Every shared laugh and every adventure gives me another reason to smile.</p></div>
+    <div class="card"><b>06</b><h3>Simply You</h3><p>And honestly, I could keep writing reasons forever. ❤️</p></div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="section-title"><div class="small">Still writing our story</div><h2>Our Journey 🕰️</h2><p>Not every important moment needs a date. Some just need to be remembered.</p></div>
+  <div class="timeline">
+    <div class="event"><div class="dot"></div><h3>The Beginning</h3><p>The moment our story started becoming something more than an ordinary story.</p></div>
+    <div class="event"><div class="dot"></div><h3>Little Adventures</h3><p>Trips, conversations, random pictures, silly moments—and memories that stayed.</p></div>
+    <div class="event"><div class="dot"></div><h3>More Than Memories</h3><p>Somewhere along the way, you became one of the people I care about most.</p></div>
+    <div class="event"><div class="dot"></div><h3>To Be Continued…</h3><p>This isn't the end of the timeline. There are many more chapters waiting for us.</p></div>
+  </div>
+</section>
+
+<section id="gift">
+  <div class="section-title"><div class="small">One more thing</div><h2>There Is A Gift 🎁</h2><p>Don't just look at it. Open it.</p></div>
+  <div class="gift-wrap">
+    <div class="gift" onclick="openGift()">
+      <div class="bow"></div><div class="lid"></div><div class="ribbon-h"></div><div class="ribbon-v"></div><div class="box"></div>
+    </div>
+    <button class="btn" onclick="openGift()">OPEN MY GIFT 🎁</button>
+    <div id="surprise" class="surprise">
+      <h3 style="font-family:'DM Serif Display';font-size:30px;margin-bottom:12px">My gift is a promise. ❤️</h3>
+      <p style="color:#d9c8d0;line-height:1.8">I promise to keep making memories with you, keep choosing you, keep annoying you a little 😄, and keep finding new reasons to make you smile.</p>
+    </div>
+  </div>
+</section>
+
+<section id="question">
+  <div class="question-box">
+    <div class="kicker">Before you leave…</div>
+    <h2>One Last Question ❤️</h2>
+    <p>Will you stay with me for all the birthdays yet to come?</p>
+    <button class="btn" onclick="sayYes()">YES ❤️</button>
+    <div id="yesMsg">Then I have a lot of birthdays to look forward to. 🥹❤️</div>
+  </div>
+</section>
+
+<footer>Made with love, just for you. ❤️</footer>
+
+<div class="modal" id="modal" onclick="closeModal()"><button class="close" onclick="closeModal()">×</button><img id="modalImg" src="" onclick="event.stopPropagation()"></div>
+
+<script>
+const hearts=document.getElementById('hearts');
+function makeHeart(){
+  const h=document.createElement('div'); h.className='heart'; h.textContent=['❤️','💕','♡','✨'][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+'vw'; h.style.fontSize=(12+Math.random()*20)+'px'; h.style.animationDuration=(5+Math.random()*6)+'s';
+  hearts.appendChild(h); setTimeout(()=>h.remove(),12000);
+}
+setInterval(makeHeart,650);
+function openGift(){document.getElementById('surprise').classList.add('show');document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'center'});for(let i=0;i<18;i++)setTimeout(makeHeart,i*80)}
+function sayYes(){document.getElementById('yesMsg').style.display='block';for(let i=0;i<35;i++)setTimeout(makeHeart,i*50)}
+document.querySelectorAll('.photo img').forEach(img=>img.addEventListener('click',()=>{document.getElementById('modalImg').src=img.src;document.getElementById('modal').classList.add('open')}));
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+</script>
+</body>
+</html>
